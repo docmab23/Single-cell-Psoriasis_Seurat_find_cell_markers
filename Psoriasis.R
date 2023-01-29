@@ -1,29 +1,29 @@
 library("Seurat")
 library("GEOquery")
 
-"""gse <- getGEO("GSE151177") 
-k = exprs(gse[[1]])
+#gse <- getGEO("GSE151177") 
+#k = exprs(gse[[1]])
 
-files <- getGEOSuppFiles("GSE151177")
-dim(pData(gse[[1]]))
-head(pData(gse[[1]])[, 1:3])
+#files <- getGEOSuppFiles("GSE151177")
+#dim(pData(gse[[1]]))
+#head(pData(gse[[1]])[, 1:3])
 
-samples <-  gse$GSE151177_series_matrix.txt.gz@phenoData@data
-
-
-
-gsm <- getGEO(filename=system.file("extdata/GSM4567878",package="GEOquery"))
+#samples <-  gse$GSE151177_series_matrix.txt.gz@phenoData@data
 
 
-expressionSet <- getGEO("GSE138651")
-expressionSet <- expressionSet[[1]]
+
+#gsm <- getGEO(filename=system.file("extdata/GSM4567878",package="GEOquery"))
+
+
+#expressionSet <- getGEO("GSE138651")
+#expressionSet <- expressionSet[[1]]
 #You can then look at the info of the samples:
   
-pData(expressionSet)
+#pData(expressionSet)
 #And the assay data itself
 
-exprs(expressionSet)
-"""
+#exprs(expressionSet)
+
 
 seurat_obj <- ReadMtx(mtx = './GSE151177/GSM4567877_Control01_matrix.mtx.gz',
         features="./GSE151177/GSM4567877_Control01_features.tsv.gz",
